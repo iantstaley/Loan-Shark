@@ -1,0 +1,400 @@
+{
+    "address": "0xb9712C8a34341769C7bc8e8A138ee6Dde5D28eE7",
+    "abi": [
+        {
+            "type": "constructor",
+            "payable": false,
+            "inputs": [
+                {
+                    "type": "address",
+                    "name": "_stablecoin"
+                },
+                {
+                    "type": "address",
+                    "name": "_collateralToken"
+                },
+                {
+                    "type": "uint256",
+                    "name": "_ratio"
+                },
+                {
+                    "type": "uint256",
+                    "name": "_fee"
+                }
+            ]
+        },
+        {
+            "type": "event",
+            "anonymous": false,
+            "name": "Borrow",
+            "inputs": [
+                {
+                    "type": "address",
+                    "name": "borrower",
+                    "indexed": true
+                },
+                {
+                    "type": "address",
+                    "name": "stablecoin",
+                    "indexed": true
+                },
+                {
+                    "type": "address",
+                    "name": "collateralToken",
+                    "indexed": true
+                },
+                {
+                    "type": "uint256",
+                    "name": "amount",
+                    "indexed": false
+                },
+                {
+                    "type": "uint256",
+                    "name": "timestamp",
+                    "indexed": false
+                }
+            ]
+        },
+        {
+            "type": "event",
+            "anonymous": false,
+            "name": "OwnershipTransferred",
+            "inputs": [
+                {
+                    "type": "address",
+                    "name": "previousOwner",
+                    "indexed": true
+                },
+                {
+                    "type": "address",
+                    "name": "newOwner",
+                    "indexed": true
+                }
+            ]
+        },
+        {
+            "type": "event",
+            "anonymous": false,
+            "name": "Repay",
+            "inputs": [
+                {
+                    "type": "address",
+                    "name": "borrower",
+                    "indexed": true
+                },
+                {
+                    "type": "address",
+                    "name": "stablecoin",
+                    "indexed": true
+                },
+                {
+                    "type": "address",
+                    "name": "collateralToken",
+                    "indexed": true
+                },
+                {
+                    "type": "uint256",
+                    "name": "amount",
+                    "indexed": false
+                },
+                {
+                    "type": "uint256",
+                    "name": "timestamp",
+                    "indexed": false
+                }
+            ]
+        },
+        {
+            "type": "event",
+            "anonymous": false,
+            "name": "SetActive",
+            "inputs": [
+                {
+                    "type": "bool",
+                    "name": "active",
+                    "indexed": false
+                },
+                {
+                    "type": "address",
+                    "name": "owner",
+                    "indexed": true
+                }
+            ]
+        },
+        {
+            "type": "event",
+            "anonymous": false,
+            "name": "SetFee",
+            "inputs": [
+                {
+                    "type": "uint256",
+                    "name": "oldFee",
+                    "indexed": false
+                },
+                {
+                    "type": "uint256",
+                    "name": "newFee",
+                    "indexed": false
+                },
+                {
+                    "type": "address",
+                    "name": "owner",
+                    "indexed": true
+                }
+            ]
+        },
+        {
+            "type": "function",
+            "name": "active",
+            "constant": true,
+            "stateMutability": "view",
+            "payable": false,
+            "inputs": [],
+            "outputs": [
+                {
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "type": "function",
+            "name": "borrow",
+            "constant": false,
+            "payable": false,
+            "inputs": [
+                {
+                    "type": "uint256",
+                    "name": "_amount"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "type": "function",
+            "name": "borrowed",
+            "constant": true,
+            "stateMutability": "view",
+            "payable": false,
+            "inputs": [
+                {
+                    "type": "address"
+                }
+            ],
+            "outputs": [
+                {
+                    "type": "uint256"
+                }
+            ]
+        },
+        {
+            "type": "function",
+            "name": "claim",
+            "constant": false,
+            "payable": false,
+            "inputs": [
+                {
+                    "type": "address",
+                    "name": "_token"
+                },
+                {
+                    "type": "uint256",
+                    "name": "_amount"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "type": "function",
+            "name": "claimETH",
+            "constant": false,
+            "payable": false,
+            "inputs": [],
+            "outputs": []
+        },
+        {
+            "type": "function",
+            "name": "claimFees",
+            "constant": false,
+            "payable": false,
+            "inputs": [],
+            "outputs": []
+        },
+        {
+            "type": "function",
+            "name": "collateralToken",
+            "constant": true,
+            "stateMutability": "view",
+            "payable": false,
+            "inputs": [],
+            "outputs": [
+                {
+                    "type": "address"
+                }
+            ]
+        },
+        {
+            "type": "function",
+            "name": "collectedFees",
+            "constant": true,
+            "stateMutability": "view",
+            "payable": false,
+            "inputs": [],
+            "outputs": [
+                {
+                    "type": "uint256"
+                }
+            ]
+        },
+        {
+            "type": "function",
+            "name": "currentlyLent",
+            "constant": true,
+            "stateMutability": "view",
+            "payable": false,
+            "inputs": [],
+            "outputs": [
+                {
+                    "type": "uint256"
+                }
+            ]
+        },
+        {
+            "type": "function",
+            "name": "ethBalance",
+            "constant": true,
+            "stateMutability": "view",
+            "payable": false,
+            "inputs": [],
+            "outputs": [
+                {
+                    "type": "uint256"
+                }
+            ]
+        },
+        {
+            "type": "function",
+            "name": "fee",
+            "constant": true,
+            "stateMutability": "view",
+            "payable": false,
+            "inputs": [],
+            "outputs": [
+                {
+                    "type": "uint256"
+                }
+            ]
+        },
+        {
+            "type": "function",
+            "name": "owner",
+            "constant": true,
+            "stateMutability": "view",
+            "payable": false,
+            "inputs": [],
+            "outputs": [
+                {
+                    "type": "address"
+                }
+            ]
+        },
+        {
+            "type": "function",
+            "name": "ratio",
+            "constant": true,
+            "stateMutability": "view",
+            "payable": false,
+            "inputs": [],
+            "outputs": [
+                {
+                    "type": "uint256"
+                }
+            ]
+        },
+        {
+            "type": "function",
+            "name": "renounceOwnership",
+            "constant": false,
+            "payable": false,
+            "inputs": [],
+            "outputs": []
+        },
+        {
+            "type": "function",
+            "name": "repay",
+            "constant": false,
+            "payable": false,
+            "inputs": [
+                {
+                    "type": "uint256",
+                    "name": "_amount"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "type": "function",
+            "name": "setActive",
+            "constant": false,
+            "payable": false,
+            "inputs": [
+                {
+                    "type": "bool",
+                    "name": "_active"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "type": "function",
+            "name": "setFee",
+            "constant": false,
+            "payable": false,
+            "inputs": [
+                {
+                    "type": "uint256",
+                    "name": "_fee"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "type": "function",
+            "name": "stablecoin",
+            "constant": true,
+            "stateMutability": "view",
+            "payable": false,
+            "inputs": [],
+            "outputs": [
+                {
+                    "type": "address"
+                }
+            ]
+        },
+        {
+            "type": "function",
+            "name": "totalCollectedFees",
+            "constant": true,
+            "stateMutability": "view",
+            "payable": false,
+            "inputs": [],
+            "outputs": [
+                {
+                    "type": "uint256"
+                }
+            ]
+        },
+        {
+            "type": "function",
+            "name": "transferOwnership",
+            "constant": false,
+            "payable": false,
+            "inputs": [
+                {
+                    "type": "address",
+                    "name": "newOwner"
+                }
+            ],
+            "outputs": []
+        }
+    ]
+}
